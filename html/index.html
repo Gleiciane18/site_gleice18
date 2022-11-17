@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo Gleiciane Minervino ferreira</title>
+<script type="text/javascript">
+var left = 0,    tank = document.getElementById('tank'),    timerId = 0;
+
+timerId = setInterval( function() { //This function is called by the browser every 33 milliseconds    if( left++ > 500 ) {        clearInterval( timerId ); //Stop the interval because left is > 200    }    tank.style.left = left + "px";
+}, 100 );
+</script>
 
 <style>
 
