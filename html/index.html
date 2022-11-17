@@ -5,20 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo Gleiciane Minervino ferreira</title>
-<script type="text/javascript">
-var left = 0,    gle = document.getElementById('gle'),    timerId = 0;
-
-timerId = setInterval( function() {     if( left++ > 500 ) {        clearInterval( timerId ); // parar no intervalo a esquerda > 500    }    gle.style.left = left + "px";
-}, 100 );
-</script>
-
+    <script>
+        var id = null;
+        function Move() {
+          var elem = document.getElementById("gle");   
+          var pos = 0;
+          clearInterval(id);
+          id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 350) {
+              clearInterval(id);
+            } else {
+              pos++; 
+              elem.style.top = pos + 'px'; 
+              elem.style.left = pos + 'px'; 
+            }
+          }
+        }
+        </script>
 <style>
 
- .dados{
+body{
+    background-color: rgb(0, 195, 255);
+}
+.dados{
     list-style-type: none;
     margin: 1% !important;
- }
+}
+#gle {
+  position: relative;
+}
+button{
+    border-radius: 10%;
+}
+
 </style>
+
 </head>
 <body>
     
@@ -26,14 +48,18 @@ timerId = setInterval( function() {     if( left++ > 500 ) {        
     <h1 style="text-align:center;">Gleiciane Minervino</h1>
     <hr size="5" color="black">
     <br>
-    <img id="gle" src="iimg.jpeg" width="100" height="100">
+    <img src="img/iimg.jpeg" width="100" height="100" id="gle">
         <ul class="dados">
             <li>Telefone: 92992740120</li>
             <li>Email: gmfaabreu@gmail.com</li>
             <li>Av.Taruma S/N Centro</li>
         </ul>
     <br>
-   
+    <p>
+        <button onclick="Move()">Clicar pra mover a imagem</button> 
+        </p>
+        
+        
     <hr size="5" color="black">
     <center><caption> <h1>Formação</h1></caption></center>
     <br>
