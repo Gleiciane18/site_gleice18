@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo Gleiciane Minervino ferreira</title>
 <script type="text/javascript">
-var left = 0,    tank = document.getElementById('tank'),    timerId = 0;
+var left = 0,    gle = document.getElementById('gle'),    timerId = 0;
 
-timerId = setInterval( function() { //This function is called by the browser every 33 milliseconds    if( left++ > 500 ) {        clearInterval( timerId ); //Stop the interval because left is > 200    }    tank.style.left = left + "px";
+timerId = setInterval( function() {     if( left++ > 500 ) {        clearInterval( timerId ); // parar no intervalo a esquerda > 500    }    gle.style.left = left + "px";
 }, 100 );
 </script>
 
@@ -26,7 +26,7 @@ timerId = setInterval( function() { //This function is called by the browser eve
     <h1 style="text-align:center;">Gleiciane Minervino</h1>
     <hr size="5" color="black">
     <br>
-    <img src="iimg.jpeg" width="100" height="100">
+    <img id="gle" src="iimg.jpeg" width="100" height="100">
         <ul class="dados">
             <li>Telefone: 92992740120</li>
             <li>Email: gmfaabreu@gmail.com</li>
